@@ -1,0 +1,154 @@
+{
+  "config": {
+    "configFile": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\playwright.config.ts",
+    "rootDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "line",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.49.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "sauce-demo.spec.ts",
+      "file": "sauce-demo.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "status": "passed",
+                  "duration": 3194,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-01-19T10:12:02.722Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8affd4a1ae500a6549dc-bc36f55addfbc392b22a",
+          "file": "sauce-demo.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "SyntaxError: D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts: Unexpected token, expected \",\" (13:123)\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m",
+      "stack": "SyntaxError: D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts: Unexpected token, expected \",\" (13:123)\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m",
+      "location": {
+        "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts",
+        "line": 13,
+        "column": 123
+      },
+      "snippet": "\u001b[90m   at \u001b[39mtest-2.spec.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+    }
+  ],
+  "stats": {
+    "startTime": "2025-01-19T10:12:00.538Z",
+    "duration": 5908.006000000052,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
