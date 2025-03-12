@@ -1,9 +1,6 @@
 import test, { Browser, BrowserContext, chromium, Page } from "@playwright/test";
 import { LoginPage } from "../pages/loginpage";
 
-
-
-
 let browser:Browser;
 let browserContext:BrowserContext;
 let page:Page;

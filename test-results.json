@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\playwright.config.ts",
-    "rootDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+    "configFile": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn.config.one.ts",
+    "rootDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/unicorn/rough",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,7 +47,7 @@
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/unicorn/rough",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -61,7 +61,7 @@
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
-        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/unicorn/rough",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -75,7 +75,7 @@
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
-        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/src/specs",
+        "testDir": "D:/PlaywrightFiles/PlaywrightFrameworkOne/unicorn/rough",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -86,19 +86,19 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.49.1",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "sauce-demo.spec.ts",
-      "file": "sauce-demo.spec.ts",
+      "title": "LoginTest.spec.ts",
+      "file": "LoginTest.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "test",
-          "ok": true,
+          "title": "Login Test using valid credentials",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -109,46 +109,123 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "status": "passed",
-                  "duration": 3194,
-                  "errors": [],
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 5,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'url')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'url')\n    at D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\LoginTest.spec.ts:23:34",
+                    "location": {
+                      "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\LoginTest.spec.ts",
+                      "column": 34,
+                      "line": 23
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m test(\u001b[32m'Login Test using valid credentials'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m() \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         url \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39murl\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         username \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39musername\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         password \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39mpassword\u001b[33m;\u001b[39m    \n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mnavigateToUrl(url)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\LoginTest.spec.ts",
+                        "column": 34,
+                        "line": 23
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'url')\n\n\u001b[0m \u001b[90m 21 |\u001b[39m test(\u001b[32m'Login Test using valid credentials'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m() \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         url \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39murl\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         username \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39musername\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         password \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39mpassword\u001b[33m;\u001b[39m    \n \u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mnavigateToUrl(url)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\LoginTest.spec.ts:23:34\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-19T10:12:02.722Z",
-                  "attachments": []
+                  "startTime": "2025-02-03T17:36:38.889Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\LoginTest.spec.ts",
+                    "column": 34,
+                    "line": 23
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "8affd4a1ae500a6549dc-bc36f55addfbc392b22a",
-          "file": "sauce-demo.spec.ts",
-          "line": 3,
+          "id": "539b1c6d7fcc511d6019-c762347a4ce6ba3af2ea",
+          "file": "LoginTest.spec.ts",
+          "line": 21,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ValidateUnicornOne.spec.ts",
+      "file": "ValidateUnicornOne.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Validate the Unicorn application",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 7,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'url')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'url')\n    at D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\ValidateUnicornOne.spec.ts:30:34",
+                    "location": {
+                      "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\ValidateUnicornOne.spec.ts",
+                      "column": 34,
+                      "line": 30
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 28 |\u001b[39m test(\u001b[32m'Validate the Unicorn application'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m() \u001b[33m=>\u001b[39m {\n \u001b[90m 29 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         url \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39murl\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         username \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39musername\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m         password \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39mpassword\u001b[33m;\u001b[39m  \n \u001b[90m 33 |\u001b[39m         property_address \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mhomepage_td\u001b[33m.\u001b[39mproperty_address\u001b[33m;\u001b[39m  \u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\ValidateUnicornOne.spec.ts",
+                        "column": 34,
+                        "line": 30
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'url')\n\n\u001b[0m \u001b[90m 28 |\u001b[39m test(\u001b[32m'Validate the Unicorn application'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m() \u001b[33m=>\u001b[39m {\n \u001b[90m 29 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         url \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39murl\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         username \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39musername\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m         password \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mloginpage\u001b[33m.\u001b[39mpassword\u001b[33m;\u001b[39m  \n \u001b[90m 33 |\u001b[39m         property_address \u001b[33m=\u001b[39m testdata\u001b[33m.\u001b[39mhomepage_td\u001b[33m.\u001b[39mproperty_address\u001b[33m;\u001b[39m  \u001b[0m\n\u001b[2m    at D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\ValidateUnicornOne.spec.ts:30:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-03T17:36:38.908Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\unicorn\\rough\\ValidateUnicornOne.spec.ts",
+                    "column": 34,
+                    "line": 30
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bf24833e8b8f8d8161af-0ad7f13d4f58ca154cce",
+          "file": "ValidateUnicornOne.spec.ts",
+          "line": 28,
           "column": 5
         }
       ]
     }
   ],
-  "errors": [
-    {
-      "message": "SyntaxError: D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts: Unexpected token, expected \",\" (13:123)\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m",
-      "stack": "SyntaxError: D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts: Unexpected token, expected \",\" (13:123)\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m",
-      "location": {
-        "file": "D:\\PlaywrightFiles\\PlaywrightFrameworkOne\\src\\specs\\test-2.spec.ts",
-        "line": 13,
-        "column": 123
-      },
-      "snippet": "\u001b[90m   at \u001b[39mtest-2.spec.ts:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mconst\u001b[39m addToCartBtns \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Count of Add to Cart buttons--->\"\u001b[39m\u001b[33m+\u001b[39m \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//*[contains(text(),'Add to cart')]\"\u001b[39m)\u001b[33m.\u001b[39mcount())\u001b[33m.\u001b[39mtoBe(\u001b[35m6\u001b[39m)\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
-    }
-  ],
+  "errors": [],
   "stats": {
-    "startTime": "2025-01-19T10:12:00.538Z",
-    "duration": 5908.006000000052,
-    "expected": 1,
+    "startTime": "2025-02-03T17:36:37.988Z",
+    "duration": 2438.201,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 2,
     "flaky": 0
   }
 }
